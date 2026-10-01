@@ -8,7 +8,7 @@
   <a href="https://thunderstore.io/c/peak/p/PeakCode/PeakWorkshop/"><img alt="Thunderstore" src="https://img.shields.io/badge/Thunderstore-PeakCode--PeakWorkshop-F7A21B?style=for-the-badge"></a>
   
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-1B2340?style=for-the-badge">
-  
+  <a href="https://discord.com/channels/1363179626435707082/1555303572415971388"><img alt="Discord - Peak Workshop thread" src="https://img.shields.io/badge/Discord-Peak_Workshop_thread-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
 </p>
 
 <p align="center">
@@ -23,7 +23,7 @@ Host a lobby, pick a map from the in-game Workshop and climb, fight and quest to
 
 **Normal PEAK stays exactly as it is.** Peak Workshop lives behind its own sign in the main menu.
 
-> This repository hosts the media and docs for the [Peak Workshop Thunderstore page](https://thunderstore.io/c/peak/p/PeakCode/PeakWorkshop/). Get the mod there - your mod manager handles the rest. Feedback, bug reports and questions go to the PEAK Modding Discord (Peak Workshop thread).
+> This repository hosts the media and docs for the [Peak Workshop Thunderstore page](https://thunderstore.io/c/peak/p/PeakCode/PeakWorkshop/). Get the mod there - your mod manager handles the rest. Feedback, bug reports and questions go to the [PEAK Modding Discord (Peak Workshop thread)](https://discord.com/channels/1363179626435707082/1555303572415971388).
 
 <a id="videos"></a>
 <h2><img src="https://raw.githubusercontent.com/ThomasAusHH/PeakWorkshop/main/media/stickers/videos.png" height="43" alt="Videos"></h2>
@@ -233,7 +233,7 @@ In `PEAK/BepInEx/PeakWorkshop/` (in your mod manager profile folder when you use
 <details>
 <summary><b>How do I report a bug or content?</b></summary>
 
-**Content:** open it in the Workshop and press **Report**. **Bugs, feedback and questions:** post them in the PEAK Modding Discord (Peak Workshop thread).
+**Content:** open it in the Workshop and press **Report**. **Bugs, feedback and questions:** post them in the [PEAK Modding Discord (Peak Workshop thread)](https://discord.com/channels/1363179626435707082/1555303572415971388).
 </details>
 
 <details>
@@ -251,7 +251,7 @@ Custom maps are built while you load in. Big maps can take a few seconds longer 
 - In the NPC editor, switching an NPC to Fighter, Shooter or Boss clears its dialogue. Set the role first, then write the dialogue.
 - Very small 3D models (some packs are 30 cm tall) need the x10 scale step when you upload them.
 
-Found something else? Tell us in the PEAK Modding Discord (Peak Workshop thread).
+Found something else? Tell us in the [PEAK Modding Discord (Peak Workshop thread)](https://discord.com/channels/1363179626435707082/1555303572415971388).
 </details>
 
 ## Credits
@@ -265,5 +265,5 @@ Found something else? Tell us in the PEAK Modding Discord (Peak Workshop thread)
 ## Links
 
 - [Peak Workshop on Thunderstore](https://thunderstore.io/c/peak/p/PeakCode/PeakWorkshop/)
-- Feedback, bug reports and help: PEAK Modding Discord (Peak Workshop thread)
+- Feedback, bug reports and help: [PEAK Modding Discord (Peak Workshop thread)](https://discord.com/channels/1363179626435707082/1555303572415971388)
 - [Downloads (trailer, short)](https://github.com/ThomasAusHH/PeakWorkshop/releases/latest)

@@ -25,6 +25,7 @@ param(
     [string]$Team = "PeakCode"
 )
 $ErrorActionPreference = "Stop"
+Add-Type -AssemblyName System.IO.Compression
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 Add-Type -AssemblyName System.Drawing
 

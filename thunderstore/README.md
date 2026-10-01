@@ -166,7 +166,7 @@ Yes. Peak Workshop and everything in the Workshop are free.
 In `PEAK/BepInEx/PeakWorkshop/` (in your mod manager profile folder when you use one). Mod updates don't touch it.
 
 **How do I report a bug or content?**
-**Content:** open it in the Workshop and press **Report**. **Bugs, feedback and questions:** post them in the PEAK Modding Discord (Peak Workshop thread).
+**Content:** open it in the Workshop and press **Report**. **Bugs, feedback and questions:** post them in the [PEAK Modding Discord (Peak Workshop thread)](https://discord.com/channels/1363179626435707082/1555303572415971388).
 
 **Why does a map take a moment to load?**
 Custom maps are built while you load in. Big maps can take a few seconds longer than a vanilla run - grab a snack.
@@ -179,7 +179,7 @@ Custom maps are built while you load in. Big maps can take a few seconds longer 
 - In the NPC editor, switching an NPC to Fighter, Shooter or Boss clears its dialogue. Set the role first, then write the dialogue.
 - Very small 3D models (some packs are 30 cm tall) need the x10 scale step when you upload them.
 
-Found something else? Tell us in the PEAK Modding Discord (Peak Workshop thread).
+Found something else? Tell us in the [PEAK Modding Discord (Peak Workshop thread)](https://discord.com/channels/1363179626435707082/1555303572415971388).
 
 ## Credits
 
@@ -190,5 +190,5 @@ Found something else? Tell us in the PEAK Modding Discord (Peak Workshop thread)
 
 ## Links
 
-- Feedback, bug reports and help: PEAK Modding Discord (Peak Workshop thread)
+- Feedback, bug reports and help: [PEAK Modding Discord (Peak Workshop thread)](https://discord.com/channels/1363179626435707082/1555303572415971388)
 - [GitHub - media and docs](https://github.com/ThomasAusHH/PeakWorkshop)
