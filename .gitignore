@@ -1,0 +1,7 @@
+dist/
+*.zip
+__pycache__/
+# internal notes never belong in the public repo
+NOTES.md
+DECISIONS.md
+MEDIA.md

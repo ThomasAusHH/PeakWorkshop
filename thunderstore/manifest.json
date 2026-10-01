@@ -1,0 +1,9 @@
+{
+  "name": "PeakWorkshop",
+  "version_number": "0.1.0",
+  "website_url": "https://github.com/ThomasAusHH/PeakWorkshop",
+  "description": "Custom maps and game modes for PEAK, made to play with friends. Lobbies, teams, PvP, King of the Hill, NPC quests and bosses, plus an in-game Workshop and map editor. Vanilla PEAK stays untouched.",
+  "dependencies": [
+    "BepInEx-BepInExPack_PEAK-5.4.75301"
+  ]
+}
