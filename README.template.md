@@ -48,6 +48,7 @@ Prefer a download? The trailer and short are attached to the [latest release]({R
 - **Late joiners** can watch as a ghost or jump right in - the host decides.
 - **Friends get the map automatically** when they join. No hunting for files.
 - Host tools: kick and ban, change lobby settings mid-round with **F6**.
+- **Text chat** in the lobby and during the round - press Enter, `/t` for your team only.
 
 <a id="game-modes"></a>
 <h2><img src="{BASE}/media/stickers/game_modes.png" height="43" alt="Game modes built into the maps"></h2>
@@ -96,6 +97,7 @@ Like the Steam Workshop - but inside PEAK.
 - **Draw an area, fill it with a forest** (or palms, ruins, flowers ...) in one step.
 - **Sculpt terrain**, place hundreds of original PEAK blocks or your own 3D models (GLB, glTF, OBJ, FBX).
 - **Moving platforms**, traps and hazards, ball throwers, custom skies and music zones.
+- **Water and lava**: lakes to swim and dive in, rising floods, rivers and lava streams that find their own way downhill, burning rocks and shaky rocks that tumble down.
 - Spawn points, goals and loot - then press **P** to test your map on the spot.
 
 <a id="items-and-npcs"></a>
@@ -114,6 +116,8 @@ Like the Steam Workshop - but inside PEAK.
 <p align="center"><img src="{BASE}/media/gifs/01_workshop_sign.gif" width="80%" alt="The PEAK WORKSHOP sign drops into the vanilla main menu"></p>
 
 Host Game and Play Offline work exactly like before. Peak Workshop only starts when you use **its own sign** that hangs on chains in the main menu. Mod lobbies run in their own rooms, so vanilla players never land in a modded game by accident.
+
+Is the sign in the way of another mod's menu? Hold **Ctrl** and drag it wherever you like - the chains follow. **Ctrl + right click** puts it back.
 
 ---
 
@@ -229,11 +233,7 @@ Custom maps are built while you load in. Big maps can take a few seconds longer 
 <details>
 <summary><b>Known problems</b></summary>
 
-- A few screens still show German number formats (like `1,4 s`) in the English interface.
-- Some Workshop content still has German descriptions.
-- When you publish, the visibility defaults to **Public** - switch to **Private** first if you only want to share with your lobby.
-- In the NPC editor, switching an NPC to Fighter, Shooter or Boss clears its dialogue. Set the role first, then write the dialogue.
-- Very small 3D models (some packs are 30 cm tall) need the x10 scale step when you upload them.
+- Very small 3D models (some packs are 30 cm tall) are not scaled up automatically. The upload screen points it out - use the scale slider or **Fit to height**.
 
 Found something else? Tell us in the {DISCORD}.
 </details>
