@@ -1,5 +1,238 @@
 # Changelog
 
+## 0.3.0 - 36 game modes, caves, real light and darkness
+
+The biggest update so far: every map now has its own game mode (36 of them, from Battle Royale and Bomb Defusal to
+Prop Hunt and Mountain Football), real baked lighting with dark caves and flashlights, rock masses for caves and
+tunnels, stages that come and go like in the original game, lobby shows across several maps, and a much smoother
+editor.
+
+**Heads-up for map creators**
+- **Stages now show and hide like vanilla.** Anything assigned to a stage is only active while that stage runs. If
+  you only sorted something into a stage for editing, it now disappears outside of it: mark it "Also visible in
+  segment N" or set it to all stages.
+- **Zone fog fades across a soft edge** inside the zone (10 m by default) instead of fading in and out over time.
+  Existing fog zones look a little different; "Fade" is now only smoothing.
+- **The map decides which rules the host may change.** Old maps keep every rule they left open to the host.
+- **Maps that use AssetBundle blocks can no longer be published.** Replace them with GLB models or primitives.
+- **Save your map once in the editor** so it gets baked lighting (see "Light and darkness").
+
+**Game modes: one mode per map**
+- Every map now has exactly one game mode with its own goal, line-up (co-op, teams or free-for-all) and rules. The
+  editor has a new tab Map › Game mode with mode tiles, a "what the map still needs" checklist (one click places a
+  missing zone or spawn where you look) and only the rules that matter for that mode.
+- Old maps keep working: their mode is worked out from their old team settings.
+- **Co-op:** Ascent (climb together; with teams, the first team at the helicopter wins; the ending can be the
+  helicopter or the Nadir), Zombie survival, Scenario (your own win/lose conditions from flags and counters, with your
+  own victory text), Rescue, Defense (protect an object with hit points against waves) and Escort (a cart only moves
+  while players are next to it and no enemy blocks it).
+- **Battle:** Last one standing, Deathmatch, Shove arena (no damage, only pushing), Gun game (every takedown gives you
+  the next weapon), Skywars (islands over the void, the last player who pushed you gets the kill), Battle royale
+  (shrinking zone in phases, you drop in with the game's parachute) and Kill confirmed (collect tags).
+- **Tactical rounds:** Bomb defusal (plant at site A/B, defuse with E, faster with a defuse kit, blinking and beeping
+  bomb), Hostage rescue (hostages can be animated figures that sit, follow their rescuer and cheer) and Duel arena (1v1
+  or 2v2, first to N rounds).
+- **Zones:** Domination, Summit assault (take the zones in order, each capture adds time, respawns can move up), Summit
+  flag, Capture the flag and Treasure run.
+- **Race:** Obstacle race and Summit race with a shared start, checkpoints, real placings, "first wins / top N qualify
+  / everyone runs it out", team place points and "back to checkpoint" or "out" on falls.
+- **Roles:** Hunters, Infection, Hide and seek, Tag, VIP escape and Prop hunt (hiders turn into the rock, crate or
+  mushroom they look at with G). Roles are rolled at departure, and the special role gets a short head start.
+- **Party:** Flood (rising water or lava, standing or swimming in it puts you out), Crumbling floor, Hang on (last one
+  on the wall wins), Rockfall (dodge real tumbling boulders), Hot potato (the holder runs faster, it ticks faster near
+  the end, the game's dynamite goes off) and Mountain football.
+- **Rules for creators:** lives (1, several or unlimited), score limit, points per takedown, penalty for falling,
+  respawn delay, spawn protection (ends with your first attack), starting gear (also Workshop items, which download
+  with the map), fall limit ("from spawns" sets it 25 m below the lowest spawn), time limit and who wins at time-out.
+- **Mutators:** Shoves only, Downed (knocked out is not out, teammates can help you up) and Kick (the game's hidden
+  kick on right mouse with empty hands, in any mode, with knockback, cooldown, damage and more adjustable).
+- **Takedowns** go to the last opponent who hit or pushed you in the last 6 seconds, including falls, lava and
+  elimination zones. Respawns pick the spawn furthest from living enemies.
+- **HUD:** kill feed, your points and the leader under the timer, scoreboard while holding Left Alt, "BACK IN …" or
+  "ELIMINATED", status lines per mode (gun game level, zone to capture, race place, role, flag or bomb carrier …), a
+  zone ring and "OUTSIDE THE ZONE" for Battle royale, and new end banners such as "All waves survived!", "Mission
+  complete!" or "All zones captured". Timers now sit on dark plates so they stay readable against a bright sky.
+- **Spectator area:** a new zone where players who are out stand alive instead of becoming ghosts. They can walk,
+  wave and talk but can't trigger anything; an "arena" zone sends them back if they jump in.
+- **Rounds:** preparation (buy, no damage), fight, round end and a world reset (everyone revived and healed, dropped
+  items cleared). Side swap after N rounds, round wins for the match, survivors can keep their gear, and different
+  weapons each round. Late joiners come in at the next round.
+- **Money and buy counters:** start money, money for takedowns, round wins and losses, planting, defusing and
+  rescuing. Give any object a price on its E interaction and it becomes a buy counter ("· $500"); the item goes
+  straight into your hand.
+- **Mountain football:** a physics ball run by the host, kicked with the game's own kick (faster kick animation,
+  costs only part of your stamina), dribbling, goals and own goals with jingle, kick-off with air horn, out of bounds
+  and a scoreboard. The ball can be a basketball, coconut, snowball, stone, Bing Bong or any block. In the editor,
+  "Build a pitch" lays out a whole field in one click (grass stripes, lines, flags, goals with net and spawns), and
+  the test run has a practice ball.
+- **Honeycomb floors** for Crumbling floor: hexagon tiles that break into shards, a builder for rings of tiles and
+  whole levels below, warning colours and sounds.
+- The map check reports what a mode is missing (a hill without a hold zone, defusal without a bomb site, a fall limit
+  above the spawns …).
+
+**Guns**
+- Ranged items can now be real guns: full-auto, magazines with reserve ammo, reload on R (doesn't open the emote
+  wheel while you hold a gun), shotgun pellets, headshot multiplier, spread while moving, muzzle climb and a scope on
+  right mouse. An ammo display shows "12 / 60", a reload bar and "No ammo".
+
+**King of the Hill, waves and courses**
+- King of the Hill can have a moving hill (a different zone every N seconds, with a "Hill moves in …" countdown).
+- Fixed: in co-op hold zones each player's game counted on its own, so one player could see a win and another not.
+  The host counts now. Hold time no longer runs during the start countdown.
+- Zombie waves can come from spawn zones (A, B …), chosen per enemy group. Enemy types can be taken from the Workshop
+  straight into waves.
+- Fixed: wave 1 started during the start countdown. If the host leaves, the waves continue with the new host.
+- Obstacle courses have a shared start and the same clock on every PC, with a finish banner and ranking. Before, every
+  player's game timed the course on its own and there was no winner.
+
+**Lobby**
+- **Shows:** the host can queue 2 to 12 maps. Each round uses its map's own mode. After each round everyone goes back
+  to the airport and the next map starts by itself about 8 seconds later, once everyone has it. There is a points
+  table (+1 for playing, +3 for a win) and final standings at the end.
+- **F5: back to the airport.** When a round ends, a box offers to skip the film and stats. Solo or as host, F5 sends
+  everyone back at once. Other players mark themselves ready, and once all are ready the host sends everyone after a
+  short countdown. The key can be changed or turned off in the config under `[Lobby] AirportKey`.
+- The lobby shows a card for the map's game mode (description, line-up, lives, mutators). Rules the map locks show as
+  "Set by the map"; the rest are pickers, depending on the mode (lives, score goal, respawn, round wins, side swap,
+  start money, fuse, zone timings and more).
+- **"Close lobby" really closes the lobby now.** It asks first, then sends everyone to the main menu with a message.
+  Before, it only locked the lobby to new players.
+- Fixed: players who were kicked, banned or sent out by "Close lobby" landed on "Failed to connect to Photon
+  Network". They now leave cleanly and see the reason in the main menu.
+- Fixed: after switching maps in a lobby, everyone could die on spawn because the previous map's mode and fall limit
+  stayed active.
+- Fixed: starting a map directly from the Workshop didn't apply its game mode, so scenario and wave rounds never ended
+  with a result.
+- A map file that can't be read no longer sends everyone onto an empty island; the host gets a message instead.
+- The key hint shows the scoreboard key during combat and race rounds.
+
+**Light and darkness**
+- **Custom maps now get real baked lighting.** The creator's game bakes it once, with PEAK's own lighting; players
+  only download the file with the map. Caves and overhangs are dark, nights are really dark, and the game's lamps
+  (cave lights, glow mushrooms, lava lights, torches, the respawn chest …) light up custom maps.
+- It also works on graphics cards without hardware ray tracing (slower to bake). The bake runs in the background when
+  you save, or from Map › Openness / Lighting. If the game crashes during a bake, the next one automatically uses smaller steps.
+  New config section `[Light]` (Backend, BakeOnSave, BakeRays).
+- Without a light file, brightness now follows how much sky a spot can see, so caves and overhangs are darker than
+  before anyway. Storm, cold and cave plants work the same for everyone, with or without the light file.
+- Fixed: on very large maps, or maps with one object far away, everything outside the original island was bright at
+  night and had no storm or fog. Far-off stray objects are left out, huge maps get a coarser light grid, and the editor
+  and map check list the stray objects (click one to fly there).
+- Fixed: maps inside the original island's area kept the original lighting, and moved empty stages showed dark fog
+  boxes.
+- **Darkness:** a map-wide darkness setting (with tint) for night maps, and a new "Darkness" zone effect that darkens
+  an area with remaining light, a soft edge and a tint. It looks just as dark from outside.
+- **Flashlights and lanterns:** items can now give off light, as a cone or all around, switchable or always on, with
+  range, colour, shadows, battery with a low-battery flicker, and a beam you can see in fog. Synced for all players.
+
+**Caves and rock masses**
+- New rock masses for real caves, tunnels, overhangs and arches, which height terrain can't make. In the editor's new
+  "Cave" menu you can place a rock mass (rectangle, dome or free outline), drill a tunnel by flying through the rock,
+  carve rooms, and paint on the rock with a brush (build up, carve, smooth).
+- Walls, tunnel walls and overhangs are climbable; flat ceilings are not, as in the game. The terrain and grass under
+  a rock mass are cut out, and caves get darker the further in you go.
+- Scatter areas can place things only inside caves: on the floor, walls or ceiling (stalactites hang down).
+
+**Stages and skies**
+- Your own content now follows the game's stages: stage 2 is not visible from the start, and the previous stage
+  disappears after the campfire. This also saves performance. A new "Also visible in segment N" switch keeps
+  transitions like the hill with the campfire visible.
+- Item spawners of later stages fill only when that stage starts, like in the game.
+- Skies per stage that fade over after the campfire, and sky zones that give each player their own sky while standing
+  inside (with priority for overlapping zones). New starry sky with aurora like the Nadir.
+
+**Nadir ending**
+- Maps can keep the Nadir as an ending: chosen campfires warp everyone into the Nadir, or, as in the game, you place
+  the four amulets in the amulet statue. Arriving alive in the Nadir wins. The editor has a Nadir view and a movable
+  amulet statue.
+- Fixed: the end gate and credits hung on custom maps when the Kiln stage was switched off.
+- Fixed: with your own summit, the helicopter flew in from far out of view.
+
+**Moving, crumbling and thrown objects**
+- Climbers now move along with moving and tilting walls instead of the wall sliding away under their hands.
+- New motions: wobble (tilts like a spinning top) and ramp-up (motion starts calm and gets wilder).
+- Shaky objects can crumble into shards instead of falling, also by the hundreds and inside moving groups, and regrow
+  if wanted. Warning looks (glowing cracks, then lava) and sounds. Nothing crumbles before "GO!", spectators never
+  trigger them, and late joiners see the current state.
+- Rockfall: emitters can throw real rocks of several kinds and sizes, more and more often over time. The host
+  calculates their flight so everyone sees the same; landed rocks are climbable, roll downhill if wanted and shatter
+  later. The editor shows direction, spread and flight path.
+
+**New shapes, looks and random variants**
+- New basic shapes: hexagon column and pyramid. Basic shapes can use the game's own materials (basalt, volcanic rock
+  …) and then look and sound like the island's rock.
+- See-through looks: holes in patterns (nets, fences, grates) and transparent parts of PNG textures.
+- Groups can appear only by chance or as one of several variants, rolled anew every round and the same for everyone.
+  The editor has a preview roll.
+
+**Zones, fog, walls and rivers**
+- Effect zones can be rotated, and the rotation now counts in play (it used to be ignored). Six side handles let you
+  drag one side at a time.
+- New soft edge for afflictions, zone fog, push and darkness: the effect grows from 0 at the border to full strength
+  after N metres.
+- Large fog volumes no longer look like sharp boxes from far away: rounded corners, wavy edges and a softer edge with
+  distance.
+- Fog walls can be invisible in play (they still block and can't be climbed).
+- Rivers and lava streams now follow the surface, also down steep walls as one smooth band, without stair steps.
+
+**Spawning and NPCs**
+- Fixed: feet stuck in the ground after spawning, teleporting, a lava reset or joining late, so you couldn't jump.
+  Every spawn, teleport, respawn, round reset and test run now sets you down cleanly.
+- NPCs and pets walk better: they step up to 0.6 m, jump up to 1.5 m and walk around walls. Pets follow your path
+  through doors and around corners and appear next to you if they get stuck.
+- Items given by an object interaction (a shop counter, chest or lever) now go straight into your hand.
+- Items handed out by actions are loaded with the map (they could be "not loaded" before), and Workshop items show
+  their title instead of `item:<id>`.
+- Conditions accept a bare word (`lever`) as a flag.
+
+**Editor**
+- **Simplified Chinese interface** by TFJSN (ETWML) / 由 TFJSN 汉化: pick ZH with the language button (DE → EN → ZH)
+  or leave it on "auto" with the game set to Chinese. Texts newer than the translation table still show in English.
+- **No more stutter:** the regular freezes, most noticeable in the Scene tab and on maps with hundreds of objects, are
+  gone. In-game overlays and HUDs also create far less garbage, so there are fewer small stutters while playing.
+- **Sculpting is fast:** a brush stroke on large terrain with vegetation used to rebuild everything (over 30 s); now
+  it takes a fraction of a second. Vegetation in the brushed area is re-scattered once you pause for a few seconds or
+  start a test run. Undoing a stroke no longer rebuilds the terrain.
+- Undo no longer rebuilds the whole map after a stage was moved, and fog sphere settings apply instantly (they used
+  to trigger a 30-second rebuild).
+- **Scene list:** group by area group or by biome (stages in play order, transitions, "everywhere"), a "Game mode"
+  block at the top (spawns, summit, mode zones, buy counters), and the list jumps to what you click in the world
+  (can be turned off). Stray objects far away from the map are listed with a warning.
+- **Map tab** with sub-pages Map and Game mode; the former Openness section is now "Openness / Lighting" with the
+  lighting panel (state, bake button, bake on save).
+- **Skies:** sky per stage, an "Overridden by" list with jumps, a starry-sky slider and a map-wide darkness section.
+  Sky zones can be outlined in the world, and the status bar shows when another sky overrides the map sky.
+- New effects in the zone list, now grouped: Darkness, Sky (per player) and the game-mode zones.
+- Fog walls can be shown from far away as coloured outlines with their stage name. New View menu toggles for fog
+  walls, sky zones and game-mode zones - off by default so the editor opens without a tangle of lines; the selected
+  zone or fog wall always shows its outline. The game's music lines in the 3D view are off by default too.
+- Placing spawn points keeps the tool active, so you can click several in a row.
+- Campfire, fog origin and fog wall labels use the map's own stage names.
+- Fixed: moving a fog origin dragged its fog walls along in the editor, then they snapped back after the next rebuild.
+- Fixed: picking up amulets or other display items during a test run gave the wrong item.
+- Fixed: the summit marker's default position is now the real summit, not the lower Kiln respawn point.
+- Fixed: editor messages covered the shape bar.
+- Rising water and lava, motions and emitters now start when you press P and restart with every test run.
+
+**Workshop and moderation**
+- If moderation makes your content private, its page shows why. A new revision with changed content lifts the lock.
+
+**Other fixes**
+- Fixed missing climbing, item and footstep sounds on maps with dense forests. Looping tree sounds used up all audio
+  voices; now only the nearest ones play.
+- The race clock, big messages and scope view no longer stay on screen after leaving a map.
+- The map check no longer reports the game's global spawners as empty on empty ("naked") maps, and it now also flags
+  stray objects, maps too large for lighting, broken sky settings and variant groups with only one group.
+
+**Known limitations**
+- Many of the new modes have so far only been tested with few players; please report anything odd on Discord.
+- Bomb defusal and Hostage rescue need exactly two teams.
+- Prop hunt disguises and the escort cart only copy solid models (blocks made only of effects don't work).
+
+**Licences**
+- To bake light without hardware ray tracing, the mod includes unmodified compute shaders from Unity
+  (Unity Companion License) and RadeonRays 4.1 (MIT, AMD). See THIRD-PARTY-NOTICES.md.
+
 ## 0.2.0 - Water, lava, text chat, fog and interactions
 
 **Fixes**

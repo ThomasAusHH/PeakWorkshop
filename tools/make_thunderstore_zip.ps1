@@ -4,7 +4,7 @@
 
 .DESCRIPTION
   Layout (what Thunderstore / r2modman expect):
-    manifest.json, icon.png (256x256), README.md, CHANGELOG.md,
+    manifest.json, icon.png (256x256), README.md, CHANGELOG.md, THIRD-PARTY-NOTICES.md,
     plugins/PeakWorkshop/PeakWorkshop.dll
   r2modman copies plugins/ into BepInEx/plugins/, so the DLL lands in BepInEx/plugins/PeakWorkshop/.
 
@@ -43,7 +43,7 @@ if ($manifest.version_number -notmatch '^\d+\.\d+\.\d+$') { $errors += "version_
 if ($manifest.description.Length -gt 250) { $errors += "description longer than 250 characters" }
 if ($manifest.website_url -match '\{') { $errors += "website_url still has a placeholder - run tools/finalize.py" }
 foreach ($d in $manifest.dependencies) { if ($d -notmatch '^[A-Za-z0-9_]+-[A-Za-z0-9_]+-\d+\.\d+\.\d+$') { $errors += "bad dependency: $d" } }
-foreach ($f in "icon.png", "README.md", "CHANGELOG.md") { if (-not (Test-Path (Join-Path $ts $f))) { $errors += "missing thunderstore\$f" } }
+foreach ($f in "icon.png", "README.md", "CHANGELOG.md", "THIRD-PARTY-NOTICES.md") { if (-not (Test-Path (Join-Path $ts $f))) { $errors += "missing thunderstore\$f" } }
 if (Test-Path (Join-Path $ts "README.md")) {
     $readme = Get-Content (Join-Path $ts "README.md") -Raw -Encoding UTF8
     if ($readme -cmatch '\{[A-Z][A-Z_0-9]*\}') { $errors += "README.md still has placeholders - run tools/finalize.py" }
@@ -61,7 +61,7 @@ if ($errors.Count -gt 0) { $errors | ForEach-Object { Write-Host "ERROR: $_" -Fo
 # --- stage + zip ---
 $stage = Join-Path ([IO.Path]::GetTempPath()) ("pw_ts_" + [guid]::NewGuid().ToString("N"))
 New-Item -ItemType Directory -Force (Join-Path $stage "plugins\PeakWorkshop") | Out-Null
-Copy-Item $manifestPath, $icon, (Join-Path $ts "README.md"), (Join-Path $ts "CHANGELOG.md") $stage
+Copy-Item $manifestPath, $icon, (Join-Path $ts "README.md"), (Join-Path $ts "CHANGELOG.md"), (Join-Path $ts "THIRD-PARTY-NOTICES.md") $stage
 Copy-Item $Dll (Join-Path $stage "plugins\PeakWorkshop\PeakWorkshop.dll")
 
 New-Item -ItemType Directory -Force $OutDir | Out-Null

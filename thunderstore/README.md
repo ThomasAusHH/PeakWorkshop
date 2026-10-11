@@ -4,7 +4,7 @@
 
 **Custom maps and game modes for PEAK - made to play with friends.**
 
-Host a lobby, pick a map from the in-game Workshop and climb, fight and quest together. King of the Hill on a 600 m mountain, free-for-all PvP with suitcase loot, story adventures with talking NPCs and boss fights. And when you have seen it all: build your own map right inside the game and share it with one click.
+Host a lobby, pick a map from the in-game Workshop and play one of **36 game modes** with your friends: Battle royale with a parachute drop, Bomb defusal, Prop hunt, Gun game, Capture the flag, Mountain football, King of the Hill on a 600 m mountain - or story adventures with talking NPCs and boss fights. And when you have seen it all: build your own map right inside the game and share it with one click.
 
 Normal PEAK stays exactly as it is. Peak Workshop lives behind its own sign in the main menu.
 
@@ -34,12 +34,18 @@ Normal PEAK stays exactly as it is. Peak Workshop lives behind its own sign in t
 
 ![A golden-hour pan around Ring Arena's giant mountain](https://raw.githubusercontent.com/ThomasAusHH/PeakWorkshop/main/media/gifs/02_ring_arena.gif)
 
-Every map brings its own rules - the host just presses start.
+**36 game modes.** Every map brings its own - the host just presses start. The lobby shows the mode with its rules, and whatever the map leaves open, the host can tweak.
 
-- **King of the Hill** - Ring Arena: a giant island with four biomes around one 600 m mountain. Hold the summit to win.
-- **Free-for-all PvP** - loot weapons from suitcases and fight it out.
-- **Team matches** with time limits and win conditions set by the map.
-- **Zombie waves**, **obstacle courses** with spinning and swinging platforms, **sky islands** - and classic co-op climbing.
+- **Battle** - Last one standing, Deathmatch, Gun game, Skywars, Kill confirmed, a Shove arena where you can only push, and **Battle royale** with a shrinking zone and the game's parachute drop.
+- **Tactical rounds** - **Bomb defusal** at site A or B, Hostage rescue and 1v1 / 2v2 Duel arenas. Buy phase, money, buy counters, side swaps and round wins.
+- **Zones** - **King of the Hill** (also with a hill that moves), Domination, Summit assault, Summit flag, Capture the flag and Treasure run.
+- **Race** - Obstacle race and Summit race with a shared start, checkpoints and real placings.
+- **Roles** - Hunters, Infection, Hide and seek, Tag, VIP escape and **Prop hunt**: turn into the rock, crate or mushroom you look at.
+- **Party** - Flood, Crumbling floor, Hang on, Rockfall, Hot potato and **Mountain football** with a real ball and the game's own kick.
+- **Co-op** - classic Ascent (all the way to the Nadir if the map wants), Zombie survival, Defense, Escort, Rescue and Scenarios with your own goals.
+- **Real guns** for the shooters: magazines, reload, full-auto, shotguns, scopes and headshots.
+- Kill feed, scoreboard on **Left Alt**, lives and respawns, spectator areas for players who are out, and mutators like Downed or Kick.
+- **Shows:** queue up to 12 maps and play them back to back, with a points table and final standings.
 
 ![A glide over spinning discs and rolling balls](https://raw.githubusercontent.com/ThomasAusHH/PeakWorkshop/main/media/gifs/06_obstacle_course.gif)
 
@@ -75,6 +81,8 @@ Like the Steam Workshop - but inside PEAK.
 - **Sculpt terrain**, place hundreds of original PEAK blocks or your own 3D models.
 - **Moving platforms**, traps and hazards, ball throwers, custom skies and music zones.
 - **Water and lava**: lakes to swim and dive in, rising floods, rivers and lava streams that find their own way downhill, burning rocks and shaky rocks that tumble down.
+- **Caves and real light**: carve caves and tunnels into rock, get baked lighting with dark caves and real nights, hand out flashlights and lanterns.
+- Pick a **game mode** for your map - a checklist shows what it still needs, one click places the missing zone or spawn.
 - Spawn points, goals and loot - then press **P** to test your map on the spot.
 
 ## Create your own items and NPCs
@@ -141,7 +149,7 @@ New to building? These step-by-step videos take you from your first imported 3D 
 - Peak Workshop needs an internet connection for the online Workshop and the lobby browser. Solo play and the editor work with your local content.
 - **Not compatible with TerrainRandomiser.** It breaks the map build (maps look half-finished). Disable it while you play Peak Workshop maps.
 - Other mods that change map generation may conflict as well. If a map looks broken, try without them first.
-- English and German interface (switch in the Workshop panel).
+- English, German and Simplified Chinese interface (switch in the Workshop panel; “auto” follows the game language). Chinese by TFJSN (ETWML) – texts newer than its table show in English.
 
 ## Online features & privacy
 
@@ -184,6 +192,7 @@ Found something else? Tell us in the [PEAK Modding Discord (Peak Workshop thread
 ## Credits
 
 - **Peak Workshop** by **Gummybär**
+- Simplified Chinese localization by **TFJSN (ETWML)** / 由 TFJSN 汉化
 - 3D models in the featured maps and Workshop: **[Quaternius](https://quaternius.com)** (CC0) - thank you!
 - Every Workshop asset lists its creator and license on its page.
 - PEAK by Aggro Crab & Landfall. Peak Workshop is a fan-made mod, not affiliated with or endorsed by Aggro Crab or Landfall.
