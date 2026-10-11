@@ -39,8 +39,16 @@ editor.
   flag, Capture the flag and Treasure run.
 - **Race:** Obstacle race and Summit race with a shared start, checkpoints, real placings, "first wins / top N qualify
   / everyone runs it out", team place points and "back to checkpoint" or "out" on falls.
-- **Roles:** Hunters, Infection, Hide and seek, Tag, VIP escape and Prop hunt (hiders turn into the rock, crate or
-  mushroom they look at with G). Roles are rolled at departure, and the special role gets a short head start.
+- **Roles:** Hunters, Infection, Hide and seek, Tag, VIP escape and Prop hunt. Roles are rolled at departure, and the
+  special role gets a short head start.
+- **Prop hunt:** hiders look at a prop and press G to become it - only the kinds the map allows (crates, barrels,
+  benches …), so nobody ends up as a tree. After disguising you switch to third person to see how you stand (T toggles).
+  Seekers find props by shooting them; hitting a real prop costs them health. A horn gives hiders away: everyone honks
+  at a fixed interval with a countdown on screen, and hiders can honk themselves with H. The keys show at the top right.
+  In the editor, Map › Game mode lists every kind of prop on the map to tick, plus the horn and the miss penalty.
+  Props turn with your view and stay still while you stand; X holds them in place (no moving, free look).
+  Disguised players show no health bar or name tag, and found props count as losers at the end (no helicopter seat),
+  even though they joined the seekers - the same goes for Infection and Hide and seek.
 - **Party:** Flood (rising water or lava, standing or swimming in it puts you out), Crumbling floor, Hang on (last one
   on the wall wins), Rockfall (dodge real tumbling boulders), Hot potato (the holder runs faster, it ticks faster near
   the end, the game's dynamite goes off) and Mountain football.
@@ -77,6 +85,8 @@ editor.
 - Ranged items can now be real guns: full-auto, magazines with reserve ammo, reload on R (doesn't open the emote
   wheel while you hold a gun), shotgun pellets, headshot multiplier, spread while moving, muzzle climb and a scope on
   right mouse. An ammo display shows "12 / 60", a reload bar and "No ammo".
+- Hit marker: every hit with a gun or thrown weapon shows a short cross at the crosshair; a found prop in Prop hunt
+  flashes red with a bonk.
 
 **King of the Hill, waves and courses**
 - King of the Hill can have a moving hill (a different zone every N seconds, with a "Hill moves in …" countdown).
@@ -244,6 +254,8 @@ editor.
 - Fixed missing climbing, item and footstep sounds on maps with dense forests. Looping tree sounds used up all audio
   voices; now only the nearest ones play.
 - The race clock, big messages and scope view no longer stay on screen after leaving a map.
+- The Workshop pass shows its full cover from behind too (other players saw a shifted cover with the page edge).
+- Starting gear was skipped in the first round of a new lobby if you had played round 1 in another lobby before.
 - The map check no longer reports the game's global spawners as empty on empty ("naked") maps, and it now also flags
   stray objects, maps too large for lighting, broken sky settings and variant groups with only one group.
 

@@ -77,7 +77,7 @@ Prefer a download? The trailer and short are attached to the [latest release](ht
 - **Tactical rounds** - **Bomb defusal** at site A or B, Hostage rescue and 1v1 / 2v2 Duel arenas. Buy phase, money, buy counters, side swaps and round wins.
 - **Zones** - **King of the Hill** (also with a hill that moves), Domination, Summit assault, Summit flag, Capture the flag and Treasure run.
 - **Race** - Obstacle race and Summit race with a shared start, checkpoints and real placings.
-- **Roles** - Hunters, Infection, Hide and seek, Tag, VIP escape and **Prop hunt**: turn into the rock, crate or mushroom you look at.
+- **Roles** - Hunters, Infection, Hide and seek, Tag, VIP escape and **Prop hunt**: turn into a crate, barrel or bench of the map, honk to tease the seekers, and watch yourself in third person.
 - **Party** - Flood, Crumbling floor, Hang on, Rockfall, Hot potato and **Mountain football** with a real ball and the game's own kick.
 - **Co-op** - classic Ascent (all the way to the Nadir if the map wants), Zombie survival, Defense, Escort, Rescue and Scenarios with your own goals.
 - **Real guns** for the shooters: magazines, reload, full-auto, shotguns, scopes and headshots.
