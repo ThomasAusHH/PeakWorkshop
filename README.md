@@ -82,7 +82,7 @@ Prefer a download? The trailer and short are attached to the [latest release](ht
 - **Co-op** - classic Ascent (all the way to the Nadir if the map wants), Zombie survival, Defense, Escort, Rescue and Scenarios with your own goals.
 - **Real guns** for the shooters: magazines, reload, full-auto, shotguns, scopes and headshots.
 - Kill feed, scoreboard on **Left Alt**, lives and respawns, spectator areas for players who are out, and mutators like Downed or Kick.
-- **Shows:** queue up to 12 maps and play them back to back, with a points table and final standings.
+- **Shows:** queue up to 12 maps from the map browser and play them back to back - a countdown at the airport shows the next map, and with "Count wins" the top three are crowned at the end.
 
 <p align="center"><img src="https://raw.githubusercontent.com/ThomasAusHH/PeakWorkshop/main/media/gifs/05_zombie_waves.gif" width="49%" alt="Mushroom zombies charging during a wave"> <img src="https://raw.githubusercontent.com/ThomasAusHH/PeakWorkshop/main/media/gifs/06_obstacle_course.gif" width="49%" alt="Spinning obstacle course"></p>
 <p align="center"><img src="https://raw.githubusercontent.com/ThomasAusHH/PeakWorkshop/main/media/gifs/07_sky_islands.gif" width="49%" alt="Swooping between floating sky islands"></p>

@@ -43,7 +43,7 @@ Normal PEAK stays exactly as it is. Peak Workshop lives behind its own sign in t
 - **Co-op** - classic Ascent (all the way to the Nadir if the map wants), Zombie survival, Defense, Escort, Rescue and Scenarios with your own goals.
 - **Real guns** for the shooters: magazines, reload, full-auto, shotguns, scopes and headshots.
 - Kill feed, scoreboard on **Left Alt**, lives and respawns, spectator areas for players who are out, and mutators like Downed or Kick.
-- **Shows:** queue up to 12 maps and play them back to back, with a points table and final standings.
+- **Shows:** queue up to 12 maps from the map browser and play them back to back - a countdown at the airport shows the next map, and with "Count wins" the top three are crowned at the end.
 
 
 ![A glide over spinning discs and rolling balls]({BASE}/media/gifs/06_obstacle_course.gif)

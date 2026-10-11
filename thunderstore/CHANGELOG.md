@@ -14,7 +14,9 @@ editor.
 - **Zone fog fades across a soft edge** inside the zone (10 m by default) instead of fading in and out over time.
   Existing fog zones look a little different; "Fade" is now only smoothing.
 - **The map decides which rules the host may change.** Old maps keep every rule they left open to the host.
-- **Maps that use AssetBundle blocks can no longer be published.** Replace them with GLB models or primitives.
+- **Maps that use AssetBundle blocks or materials can no longer be published** - other players don't have those
+  bundles and saw white surfaces. Replace them with GLB models, primitives, game materials or a look with your own
+  texture.
 - **Save your map once in the editor** so it gets baked lighting (see "Light and darkness").
 
 **Game modes: one mode per map**
@@ -28,10 +30,11 @@ editor.
   while players are next to it and no enemy blocks it).
 - **Battle:** Last one standing, Deathmatch, Shove arena (no damage, only pushing), Gun game (every takedown gives you
   the next weapon), Skywars (islands over the void, the last player who pushed you gets the kill), Battle royale
-  (shrinking zone in phases, you drop in with the game's parachute) and Kill confirmed (collect tags).
+  (shrinking zone in phases, shown as a glowing wall; you jump from a plane flying across the map, free-fall
+  with WASD and open the game's parachute with Space, or drop in with the parachute directly) and Kill confirmed (collect tags).
 - **Tactical rounds:** Bomb defusal (plant at site A/B, defuse with E, faster with a defuse kit, blinking and beeping
   bomb), Hostage rescue (hostages can be animated figures that sit, follow their rescuer and cheer) and Duel arena (1v1
-  or 2v2, first to N rounds).
+  or 2v2, first to N rounds). Taking out the whole other team also wins a round, not only the bomb or the hostages.
 - **Zones:** Domination, Summit assault (take the zones in order, each capture adds time, respawns can move up), Summit
   flag, Capture the flag and Treasure run.
 - **Race:** Obstacle race and Summit race with a shared start, checkpoints, real placings, "first wins / top N qualify
@@ -86,9 +89,15 @@ editor.
   player's game timed the course on its own and there was no winner.
 
 **Lobby**
-- **Shows:** the host can queue 2 to 12 maps. Each round uses its map's own mode. After each round everyone goes back
-  to the airport and the next map starts by itself about 8 seconds later, once everyone has it. There is a points
-  table (+1 for playing, +3 for a win) and final standings at the end.
+- **Shows:** the host can queue 2 to 12 maps, straight from the map browser. Each round uses its map's own mode.
+  After each round everyone goes back to the airport, where a countdown shows the next map (5 to 60 seconds, set by
+  the host); players already download it during the countdown. With "Count wins" the player list becomes the show
+  leaderboard, and when the show ends the airport shows the top three with their wins.
+- **Map browser:** creating a lobby or switching maps opens a browser with search and filters (game mode, line-up,
+  player count, local or online, category, playable only) instead of one long list. Online maps download and get
+  chosen in one click.
+- The lobby page has tabs **Rules / Teams / Show**, so nothing sits far down the page any more.
+- Fixed: when the host switched to a private map during a lobby, the other players got "Download failed".
 - **F5: back to the airport.** When a round ends, a box offers to skip the film and stats. Solo or as host, F5 sends
   everyone back at once. Other players mark themselves ready, and once all are ready the host sends everyone after a
   short countdown. The key can be changed or turned off in the config under `[Lobby] AirportKey`.
@@ -176,11 +185,16 @@ editor.
 - Rivers and lava streams now follow the surface, also down steep walls as one smooth band, without stair steps.
 
 **Spawning and NPCs**
+- Fixed: players were sometimes flung into the air when they spawned.
+- Fixed: the player who took someone out saw them keep standing. Taken-out players now fall over for 5 seconds on
+  every screen.
 - Fixed: feet stuck in the ground after spawning, teleporting, a lava reset or joining late, so you couldn't jump.
   Every spawn, teleport, respawn, round reset and test run now sets you down cleanly.
 - NPCs and pets walk better: they step up to 0.6 m, jump up to 1.5 m and walk around walls. Pets follow your path
   through doors and around corners and appear next to you if they get stuck.
 - Items given by an object interaction (a shop counter, chest or lever) now go straight into your hand.
+- **Loot chests:** an interaction can roll from one of the map's shared loot pools and spill the items out, once per
+  round if wanted. Interactions can also play a model's animation for everyone (a chest lid opens and stays open).
 - Items handed out by actions are loaded with the map (they could be "not loaded" before), and Workshop items show
   their title instead of `item:<id>`.
 - Conditions accept a bare word (`lever`) as a flag.
@@ -206,16 +220,25 @@ editor.
 - Fog walls can be shown from far away as coloured outlines with their stage name. New View menu toggles for fog
   walls, sky zones and game-mode zones - off by default so the editor opens without a tangle of lines; the selected
   zone or fog wall always shows its outline. The game's music lines in the 3D view are off by default too.
+- **Stretch handles:** every object except items (basic shapes, rocks, models) has side handles to stretch
+  it along one axis while the opposite side stays put; the inspector has width × height × depth separately.
+- **Rotation rings:** the rotate tool shows rings around the selection; drag one to turn around that axis, no
+  shortcuts needed.
 - Placing spawn points keeps the tool active, so you can click several in a row.
 - Campfire, fog origin and fog wall labels use the map's own stage names.
 - Fixed: moving a fog origin dragged its fog walls along in the editor, then they snapped back after the next rebuild.
 - Fixed: picking up amulets or other display items during a test run gave the wrong item.
 - Fixed: the summit marker's default position is now the real summit, not the lower Kiln respawn point.
 - Fixed: editor messages covered the shape bar.
+- Fixed: the Workshop opened from the Blocks palette lay behind the editor windows and couldn't be used.
+- Fixed: in top or side view, scrolling in a list also zoomed the 3D view.
 - Rising water and lava, motions and emitters now start when you press P and restart with every test run.
 
 **Workshop and moderation**
 - If moderation makes your content private, its page shows why. A new revision with changed content lifts the lock.
+- "Featured" on the Workshop home pages can now be picked by the moderators; otherwise it stays automatic (best
+  rated).
+- Fixed: the Workshop no longer uses your Windows user name anywhere (it could end up as a map's author).
 
 **Other fixes**
 - Fixed missing climbing, item and footstep sounds on maps with dense forests. Looping tree sounds used up all audio
