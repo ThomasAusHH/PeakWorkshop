@@ -1,0 +1,25 @@
+Nexus Mods upload - Peak Workshop 0.3.0
+================================================
+
+FILE
+  Archive:        dist/PeakWorkshop-0.3.0-nexus.zip
+  File name:      Peak Workshop 0.3.0
+  Version:        0.3.0
+  Category:       Main Files  (on an update: move the old file to "Old versions")
+  File description (short):
+    Main file. Extract into your PEAK folder (needs BepInExPack for PEAK).
+  Changelog:      paste nexus/changelog-0.3.0.txt  (also set the mod version to 0.3.0)
+
+MOD PAGE (first upload / when the texts change)
+  Name:           Peak Workshop
+  Game:           PEAK
+  Summary:        nexus/summary.txt  (213 characters)
+  Description:    nexus/description.bbcode  (BBCode editor / "Source" view, paste as is)
+  Category:       Gameplay (or Overhauls)
+  Author:         Gummybär
+  Primary image:  media/banner.png - more images: media/screenshots/*.jpg and media/gifs/*.gif
+  Requirements:   off-site "BepInExPack for PEAK" -> https://thunderstore.io/c/peak/p/BepInEx/BepInExPack_PEAK/
+  Permissions:    as you like; the archive contains Unity Companion License / MIT notices (THIRD-PARTY-NOTICES.md)
+  Links:          Discord https://discord.com/channels/1363179626435707082/1555303572415971388
+                  GitHub  https://github.com/ThomasAusHH/PeakWorkshop
+                  Thunderstore https://thunderstore.io/c/peak/p/PeakCode/PeakWorkshop/
