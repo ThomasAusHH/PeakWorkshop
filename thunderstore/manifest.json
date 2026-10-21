@@ -1,8 +1,8 @@
 {
   "name": "PeakWorkshop",
-  "version_number": "0.3.0",
+  "version_number": "0.4.0",
   "website_url": "https://github.com/ThomasAusHH/PeakWorkshop",
-  "description": "36 game modes for PEAK with your friends: Battle Royale, Bomb Defusal, Prop Hunt, Gun Game, Mountain Football and more. Lobbies, teams, NPC bosses, an in-game Workshop and map editor. Vanilla PEAK stays untouched.",
+  "description": "New biomes. New maps. New mountains. Build them in the in-game editor, browse what the community made in the Workshop and play it with friends in multiplayer. 36 game modes included, vanilla PEAK stays untouched.",
   "dependencies": [
     "BepInEx-BepInExPack_PEAK-5.4.75301"
   ]

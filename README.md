@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://thunderstore.io/c/peak/p/PeakCode/PeakWorkshop/"><img alt="Thunderstore" src="https://img.shields.io/badge/Thunderstore-PeakCode--PeakWorkshop-F7A21B?style=for-the-badge"></a>
   
-  <img alt="Version" src="https://img.shields.io/badge/version-0.3.0-1B2340?style=for-the-badge">
+  <img alt="Version" src="https://img.shields.io/badge/version-0.4.0-1B2340?style=for-the-badge">
   <a href="https://discord.com/channels/1363179626435707082/1555303572415971388"><img alt="Discord - Peak Workshop thread" src="https://img.shields.io/badge/Discord-Peak_Workshop_thread-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
 </p>
 

@@ -1,5 +1,122 @@
 # Changelog
 
+## 0.4.0 - Planets, item abilities, space skies and steadier multiplayer
+
+Walk around planets like in Super Mario Galaxy, build items that launch you, fly, float or shoot ropes, put jump pads
+and launch cannons on your maps, switch off the ocean for real space maps with your own night sky - and joining a
+running round on a big map finally works smoothly.
+
+**Heads-up for map creators**
+- **Rock masses are rebuilt without holes** (see "Other fixes"). Where a wall between a tunnel and the outside is
+  thinner than one grid cell, it now opens up with a clean edge. If your map has rock masses with thin walls, fly it
+  once in the editor, bake the light again and publish a new revision, so other players get the same shape.
+- **Maps with more than about 6,000 networked objects** (scattered items, luggage, vines, weather zones …) now work,
+  but the editor, the map check and publishing warn you: they cost loading time for every player. Put items into
+  luggage or scatter fewer of them.
+- **Everyone in a lobby should update.** Late joining, network IDs above 6,000 and stuck limbs are fixed on each
+  player's own PC.
+
+**Planets and gravity**
+- **Planets with their own gravity, like Super Mario Galaxy.** Select any object, rock mass, terrain or group in the
+  editor and press "Make it a planet": a gravity field sticks to it, and players walk all the way around - upside down
+  on the bottom too -, jump, fall and climb mountains on it while the camera turns with them. Choose sphere or box,
+  radius, strength, a soft edge, an offset center, or "Only pull" (players stay upright and just fall onto it).
+- The game follows along: items fall toward the planet, ropes and chains hang toward it, and parachutes, gliders,
+  balloons, jetpacks, rivers, lava streams, pets and your own NPCs use its gravity. Oceans and lava seas can be spheres
+  around a planet, and baked light and openness (storm, cold) are measured along the planet's up.
+- **Scatter around a planet:** scatter areas can cover a whole planet, a cap, a ring/band or a polygon - rays come from
+  outside toward the center and blocks stand upright to the surface.
+- The camera turns smoothly when you jump from one planet to the next, and the editor camera can follow planet gravity
+  (switch under the view cube), so placing things on the side of a planet is easy.
+- New rock mass shape "Sphere" for whole planets.
+- Works for every player without extra network traffic; other players no longer get stuck inside a planet on your
+  screen after a fast flight.
+- **New effect zone "Gravity (jumps)":** 50 % lets you jump twice as high and fall slowly, 17 % feels like the moon,
+  200 % keeps you close to the ground. Jump strength follows gravity automatically (or set it up to 1000 %), and fall
+  damage follows the height you actually fell.
+
+**Item abilities**
+- The item creator has a new step "Abilities" - up to four per item, combinable with any effect and the light (a
+  shotgun with a recoil jump, for example):
+  - **Move yourself:** cannon, rocket jump, double jump and charge-up launches; jetpack thrust; balloons tied on a
+    string above your head; umbrella and glider; a parachute that opens by itself after 1.5 s of free fall; a rocket
+    pack with a fuse that teammates (or you with G) light on your back.
+  - **Put things into the world:** ropes, anti-ropes and rope spools, chains like the chain launcher, a grappling hook
+    that pulls you to a wall or a teammate to you, cloud, shelf or bounce shroom platforms (also thrown), and pitons.
+  - **A placeable cannon** like the Scout Cannon, with your own model, force and barrel angle; a yellow arc shows
+    where you will land.
+  - **Wear it:** hold an item like any game item, or wear it on the back like the jetpack, backpack or rocket pack, or
+    on the belt like the fanny pack. Custom backpacks and fanny packs get 1-4 slots, their own weight and optionally
+    visible contents.
+
+**Jump pads and launch cannons**
+- Make any solid object a jump pad (Inspector › "Make it a jump pad") or give the game's Scout Cannon your own force,
+  angle and fuse. The invisible effect zone "Launch (jump pad)" throws players for updrafts, ramps and loops.
+- Yellow arcs in the editor show every trajectory. Pads and zones can be unlocked by flags, and the camera stays
+  steady during long tumbling flights.
+
+**Space maps and night skies**
+- Map › "Ocean & abyss" switches off the game's water and the floor at sea level - nothing but sky above and below.
+  Falling below the abyss height counts like an elimination zone (lives, spectator spot; back to the last safe spot in
+  a test run).
+- Sky › "Stars & space": your own stars, aurora with two colors, shooting stars, milky way and nebula, each with
+  strength and color, plus how lively the sky moves.
+
+**Zones, fog and scattering**
+- **Spherical effect zones** (shape bar "Sphere"): cold, fog, darkness, gravity or music as a shell around a planet;
+  "Snap to planet center" puts it right on one.
+- **Fog volumes from far away:** "Full strength up to" (or "Full strength at any distance") keeps a fog body dense and
+  shaped kilometers away, even beyond the game camera's 1,500 m view distance. Old maps look as before.
+- **Scatter areas can avoid placed objects** ("Avoid placed objects"): no more trees on platforms, roofs or temple
+  tops - also around planets and in surface mode.
+- **Objects without a collider** ("No collider (visual only)") for light pillars, beams, stars and veils.
+- **Counter display:** Map › Game mode › "Counter display" shows a bar at the top ("Star shards ●●○○") and announces
+  every increase to all players - also when a character counts in a conversation.
+
+**Editor**
+- **Align tool (L)**, like in Tinkercad: select several objects and line them up at an edge or the center on any
+  axis; click one of them to keep it fixed and align the others to it.
+- View menu: "Show gravity fields" and "Show teleporters".
+
+**Workshop and lobby**
+- **Players in a lobby can browse maps and suggest them to the host.** Guests now see the MAPS tab at the airport
+  terminal and get "Suggest to host", which posts the map to the text chat (and pops up for the host if the workshop is
+  open). Only maps that are public online can be suggested; only the host picks and starts.
+- **The workshop opens much faster and pages through long lists.** The first page shows right away, the rest loads in
+  the background, thumbnails only load for the tiles you see, and "My stuff" and the trash got page buttons. Creators
+  with many private uploads no longer wait for each one to load.
+- Browsing the workshop creates about 90 % less memory garbage, so small hitches are much rarer.
+
+**Multiplayer fixes**
+- **Players joining a running round no longer fall into the void.** On maps with several stages they were pulled back
+  to the start spawn, whose stage was already hidden for them. They now join the others or the current base camp, and
+  nobody is ever moved to a spot with nothing underneath.
+- **Joining via lobby, code or invite builds the same world as the host again.** The build used to start before the
+  player was in the room, searched every scatter area (minutes instead of seconds) and could end up different, kicked
+  or disconnected. Re-joining also no longer misses the host's character or room items.
+- **No more 30-160 s freeze after joining a big map.** Thousands of queued item registrations in Photon are now
+  applied in one pass, and messages that piled up during the build are processed in small portions.
+- **Maps with very many networked objects work again:** bells, luggage, rain zones and picked-up items failed above
+  about 6,000 networked objects (in multiplayer, items could even turn into other items). Extra network ID ranges now
+  cover up to about 100,000.
+- **Clicking into the BepInEx console window no longer freezes the game.** Windows' QuickEdit made every log line wait
+  until Esc - the game stood still and got disconnected. QuickEdit is now off for that console only (selecting text
+  still works via the window menu › Edit › Mark; config `[General] ConsoleQuickEditOff`).
+
+**Other fixes**
+- **Hands, feet, head and held items no longer get stuck in custom terrain.** Ground terrain is now only solid from the
+  outside for bodies and items, like the game's own rock; climbing, footsteps and scattering are unchanged.
+- **Rock masses no longer show small holes** in thin tunnel walls and on rough planets (triangles were turned inside
+  out); walls thinner than one grid cell open up with a clean edge.
+- **Riding moving platforms is steady** - you no longer slowly slide off, also on orbiting moons.
+- Teleports, spawns and revives land on the intended floor instead of on a neighboring object or inside a hollow model.
+- Maps with rock masses load faster: they replay the saved scatter placement like other maps.
+
+**Known limitations**
+- Planets and item abilities are tested mostly with two players so far; please report anything odd on Discord.
+- On planets, custom enemies like spiders still fall toward world down, and grass only grows on top.
+- Thin platforms, floors, walls and ceilings can still hold a hand or an item now and then.
+
 ## 0.3.0 - 36 game modes, caves, real light and darkness
 
 The biggest update so far: every map now has its own game mode (36 of them, from Battle Royale and Bomb Defusal to
