@@ -1,0 +1,24 @@
+Gets the mod running again after the PEAK 3 update, lets you paint scatter areas straight onto rock masses, sends tornadoes around planets and finally lets you edit and remove wave enemies.
+
+HEADS-UP
+- Update if you play PEAK 3. After the game update the editor wouldn't open and your character broke right after spawning. Everyone in a lobby needs 0.4.1.
+
+SCATTERING
+- Paint scatter areas onto rock masses. Select a rock mass and press "Scatter area on this rock mass", then paint directly onto the rock where things should grow or lie - tops, walls, overhangs, inside caves too. Shift erases, Shift+wheel or [ ] changes the brush. Filter by facing (top, walls, overhang, underside or your own angles) and place pieces upright or along the surface - shelf mushrooms on walls, things hanging from ceilings. The painted area glows on the rock while selected and scatters again when you move or reshape the rock.
+- "Minimum spacing" slider on every scatter area. The editor tells you how many pieces can fit at that spacing - the usual reason why an area places fewer pieces than you asked for.
+
+PLANETS
+- Tornadoes work on planets. They travel on the surface and pull and spin you along planet-up instead of standing off sideways and flying into space. Give a tornado spawner on a planet its own range: a circle, a box ("tornado alley") or free corners clicked onto the planet.
+- In the editor, the move arrows, rotation rings and selection boxes now line up with the planet's gravity, and the test flight (N) goes up and down along planet-up.
+
+ENEMIES AND WAVES
+- Enemy types in Waves can be edited and removed. Each type has its own row with its ID (so several "Mushroom zombie" types are easy to tell apart): click it to edit its values or share it in the workshop, or remove it with ✕ - its spawn points and wave entries go with it, and Ctrl+Z brings it back. Wave-only enemies without a spawn point couldn't be reached anywhere before. The spawn point inspector also got "Delete type from map".
+- The workshop note on NPCs that only live in a map now points to the right place in the editor.
+
+FIXES
+- Publishing a map no longer fails with "This ID is already taken" when one of its NPC types (usually the mushroom zombie) has a name someone else already used - it now takes the next free ID the server suggests.
+- On planets, dropped and thrown items fall toward the planet again instead of flying off into space.
+- Rotation rings turn objects that sit on sloped ground around the axis they show.
+
+KNOWN LIMITATIONS
+- Tornadoes and dropped items on planets are new - please report anything odd on Discord.

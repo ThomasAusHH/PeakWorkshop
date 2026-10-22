@@ -1,6 +1,6 @@
 {
   "name": "PeakWorkshop",
-  "version_number": "0.4.0",
+  "version_number": "0.4.1",
   "website_url": "https://github.com/{GITHUB_USER}/PeakWorkshop",
   "description": "New biomes. New maps. New mountains. Build them in the in-game editor, browse what the community made in the Workshop and play it with friends in multiplayer. 36 game modes included, vanilla PEAK stays untouched.",
   "dependencies": [
