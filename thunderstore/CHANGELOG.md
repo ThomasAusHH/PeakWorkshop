@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.4.2 - Play counts, beach palms and smoother lobby joins
+
+Maps now show how often they were played, palms can wear the bark of the beach palms, and joining or rejoining a running
+round no longer gets stuck.
+
+**Workshop**
+- **Play counts.** Every map card shows how often the map was played (solo or in a lobby, once per player every
+  30 minutes; your own maps don't count). The map page shows it under the rating, and "Most played" is a new sort order.
+  Plays are counted from 0.4.2 on.
+
+**Editor**
+- **Beach palms.** Palms can now use the light brown bark of the beach palms, or the dark beach and desert bark:
+  Object › Settings › Bark, or "Palm bark" on a scatter area. Without a choice the palm keeps its grey jungle bark, so
+  existing maps look the same.
+
+**Fixes**
+- Fixed late joiners getting stuck without a character when the round was in a stage without a campfire.
+- Fixed rejoining players getting stuck in the loading screen when the round was in a stage without a scout statue.
+- Joining a lobby on a map without scatter areas no longer freezes for 20 seconds.
+
 ## 0.4.1 - Works with PEAK 3, paint scatter areas onto rock, tornadoes on planets
 
 Gets the mod running again after the PEAK 3 update, lets you paint scatter areas straight onto rock masses, sends
