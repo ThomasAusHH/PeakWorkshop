@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://thunderstore.io/c/peak/p/PeakCode/PeakWorkshop/"><img alt="Thunderstore" src="https://img.shields.io/badge/Thunderstore-PeakCode--PeakWorkshop-F7A21B?style=for-the-badge"></a>
   
-  <img alt="Version" src="https://img.shields.io/badge/version-0.4.2-1B2340?style=for-the-badge">
+  <img alt="Version" src="https://img.shields.io/badge/version-0.5.0-1B2340?style=for-the-badge">
   <a href="https://discord.com/channels/1363179626435707082/1555303572415971388"><img alt="Discord - Peak Workshop thread" src="https://img.shields.io/badge/Discord-Peak_Workshop_thread-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
 </p>
 
@@ -51,6 +51,16 @@ New to building? These step-by-step videos take you from your first imported 3D 
 Prefer a download? The trailer and short are attached to the [latest release](https://github.com/ThomasAusHH/PeakWorkshop/releases/latest).
 
 ---
+
+<a id="expeditions"></a>
+
+## Biomes & expeditions
+
+- **Build your own biomes** in the editor - S to XXL, between a start platform and a goal with campfire and statue - and publish them to the Workshop.
+- **Chain biomes into expeditions** from the plane crash to the summit, played like vanilla PEAK: campfire, statue and fog walls per stage, flare and helicopter at the end.
+- **Mix in the game's own biomes** - shore, tropics, roots, alpine, mesa, caldera with the Kiln, gloom with the citadel - straight from PEAK's daily maps.
+- **Roll random expeditions** online, vanilla-only or mixed, and share them with a code. Keep the biomes hidden until you get there.
+- **Play them with friends:** guests download only the biomes they are missing, late joiners follow along stage by stage.
 
 <a id="play-together"></a>
 <h2><img src="https://raw.githubusercontent.com/ThomasAusHH/PeakWorkshop/main/media/stickers/play_together.png" height="43" alt="Play together"></h2>

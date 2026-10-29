@@ -14,6 +14,14 @@ Normal PEAK stays exactly as it is. Peak Workshop lives behind its own sign in t
 
 ---
 
+## Biomes & expeditions
+
+- **Build your own biomes** in the editor - S to XXL, between a start platform and a goal with campfire and statue - and publish them to the Workshop.
+- **Chain biomes into expeditions** from the plane crash to the summit, played like vanilla PEAK: campfire, statue and fog walls per stage, flare and helicopter at the end.
+- **Mix in the game's own biomes** - shore, tropics, roots, alpine, mesa, caldera with the Kiln, gloom with the citadel - straight from PEAK's daily maps.
+- **Roll random expeditions** online, vanilla-only or mixed, and share them with a code. Keep the biomes hidden until you get there.
+- **Play them with friends:** guests download only the biomes they are missing, late joiners follow along stage by stage.
+
 ## Play together
 
 ![Hosting a lobby with join code and Start Round button](https://raw.githubusercontent.com/ThomasAusHH/PeakWorkshop/main/media/screenshots/03_host_lobby.jpg)

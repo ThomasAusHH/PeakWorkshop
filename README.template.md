@@ -36,6 +36,16 @@ Prefer a download? The trailer and short are attached to the [latest release]({R
 
 ---
 
+<a id="expeditions"></a>
+
+## Biomes & expeditions
+
+- **Build your own biomes** in the editor - S to XXL, between a start platform and a goal with campfire and statue - and publish them to the Workshop.
+- **Chain biomes into expeditions** from the plane crash to the summit, played like vanilla PEAK: campfire, statue and fog walls per stage, flare and helicopter at the end.
+- **Mix in the game's own biomes** - shore, tropics, roots, alpine, mesa, caldera with the Kiln, gloom with the citadel - straight from PEAK's daily maps.
+- **Roll random expeditions** online, vanilla-only or mixed, and share them with a code. Keep the biomes hidden until you get there.
+- **Play them with friends:** guests download only the biomes they are missing, late joiners follow along stage by stage.
+
 <a id="play-together"></a>
 <h2><img src="{BASE}/media/stickers/play_together.png" height="43" alt="Play together"></h2>
 

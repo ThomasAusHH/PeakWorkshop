@@ -1,5 +1,76 @@
 # Changelog
 
+## 0.5.0 - Biomes and expeditions
+
+Build your own biomes and chain them into whole expeditions - from the plane crash to the summit, played like vanilla PEAK,
+alone or with friends. Mix in the game's own biomes, roll random expeditions and share them with a code. Plus a material
+picker for every surface, your own rock blocks, better cave tools and painted scatter areas.
+
+**Biomes**
+- **New content type: biomes.** "Create map" › Biome lets you pick a size from S to XXL (with a side view next to the Mesa
+  and a rough play time). You build inside a fixed box between a start and a goal platform - campfire and statue sit at the
+  goal - and can grow the box later. The editor check tells you what sticks out of the box, whether there is a route from
+  start to goal and whether there are too many networked objects. "Finish" records the scattering and draws the height
+  profile and side view.
+- Publish it as a **biome for expeditions**, with its stats (size, length, height gain, chests, height profile). The workshop
+  has a new "Biomes" category and a "BIOME S-XXL" badge.
+
+**Expeditions**
+- **Chain biomes into an expedition** and play it like vanilla: each stage has its campfire, statue and fog walls, the fog
+  speed follows the estimated play time, and at the end there is the flare, the helicopter and "YOU PEAKED". Up to 32 biomes,
+  30 km long and 15 km high. A biome's sky and music cover its stage, climbing music and ambience work like in the game.
+- **Vanilla biomes in expeditions:** shore, tropics, roots, alpine, mesa, caldera (with the Kiln) and gloom (with the
+  citadel) come from the game's real daily maps - pick a variant or let it be random. Light, cold, heat, fog, enemies and
+  items behave like in the game. Loading happens behind the loading screen (3-5 biomes ahead, depending on your RAM) and in
+  the vanilla transition at the campfire, without freezes.
+- **Expedition planner** (Workshop › Maps › "Plan expedition"): add biomes and drag them into order, see the height profile
+  and the rules (too long, too high, duplicate biomes), search, filter and sort the biome list (A-Z, newest, rating). Roll an
+  expedition online, vanilla-only or mixed - every roll gets a code your friends can load. "Hide biomes" keeps the rolled
+  biomes secret, even from the host, until you reach them. Save, delete and publish expeditions, and continue one from the
+  last camp you reached. Fog is always on in expeditions.
+- **Camps, crash site and summit:** every camp uses the same hand-built platform (its rock adapts to the biome next to it,
+  with food skewers at the fire). Expeditions start at the original plane crash with some gear and end on a proper summit.
+- **Expeditions in multiplayer:** the host picks an expedition for the lobby (switch Map | Expedition, also in "Create
+  lobby"). Guests download only the biomes they are missing and assemble the expedition themselves, and the round starts
+  together once everyone has preloaded. Public expedition lobbies show up in the lobby browser, private ones work with a
+  join code. Late joiners get the same expedition and follow the stage changes. "My lobby" hides rules, teams and show for
+  expeditions.
+
+**Editor**
+- **Material picker for every surface.** Rocks, terrain, rock masses and primitives pick their material from one catalog
+  with preview tiles, search and groups (rock, desert, snow, volcano, forest, temple ...), applied with a click. Create your
+  own materials: a tinted variant of a game material (top layer, structure image, structure size, footstep sound) or your
+  own image - other players get the images with the map.
+- **Your own rock blocks.** "Save as own rock" turns a sculpted rock mass into a block you can place, rotate, scale and
+  scatter like any other rock (Blocks › Own rocks). The map carries it. Rock masses also grow their box by themselves while
+  you sculpt, drill or carve rooms.
+- **Cave tools:** a live preview cuts tunnels and rooms into the rock while you aim, and a click keeps them. The sign tells you
+  when the shape lies completely inside the rock (invisible from outside). New cross-sections for tunnels and the brush:
+  round, square, diamond, triangle, arch and pointed arch.
+- **Paint scatter areas** straight onto terrain, the island or scattered objects - things only grow where you paint (Shift
+  erases, Shift+wheel or [ ] changes the brush). The first stroke gives the area its shape. "New area on exactly this piece"
+  and "one layer up with the same outline" put mushrooms and bushes on top of your scattered rocks.
+- **New block in every map:** the original crashed plane (Blocks › Island blocks).
+
+**Changes**
+- **Simplified Chinese translation updated** - it now covers almost the whole mod, including biomes, expeditions and the
+  planner (thanks to TFJSN / ETWML).
+- Trees, plants and mushrooms are now scattered upright instead of leaning with the slope.
+- **Statues bring back late-join ghosts** (not in team rounds), like in vanilla.
+
+**Fixes**
+- **Number fields in the editor work again.** Since the PEAK 3 update you could click into them, but typing and Backspace did
+  nothing - and Delete could remove the selected object instead of a digit.
+- Players who join while the host is still loading are now waited for and play normally instead of becoming ghosts.
+- Joining a running round by room code no longer sometimes builds the island without the host's map.
+- A ghost in the round made every statue a dud - no items, no revive. Fixed.
+- Fixed an antlion error spamming the console every frame.
+- Players can now load the host's private (link-only) biomes in an expedition. If a biome still can't be loaded, the
+  message names it and says why.
+- The lobby list no longer retries a refused map every 15 seconds (which ended in "too many requests").
+- Stretched sphere and capsule primitives now collide with their visible shape - no more invisible bubble above flat
+  domes.
+
 ## 0.4.2 - Play counts, beach palms and smoother lobby joins
 
 Maps now show how often they were played, palms can wear the bark of the beach palms, and joining or rejoining a running
