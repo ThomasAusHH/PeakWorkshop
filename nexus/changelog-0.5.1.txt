@@ -1,0 +1,23 @@
+Faster, calmer sculpting on terrain and rock masses, gentle raise and lower brushes for rock, scattering on just one side of a wall, and rock masses that belong to a stage.
+
+SCULPTING AND VEGETATION
+- Sculpt without waiting. Brush strokes on terrain or rock masses no longer rescatter the vegetation by themselves. A bar at the top of the 3D view says "Vegetation out of date - N areas" with a Recalculate button (runs over several frames with progress); leaving the editor recalculates anyway.
+- Rescatter only what changed. Scatter areas can roll every try on its own (on by default for new areas, older areas switch over with the first stroke). After a stroke only the tries near the brush are searched again - usually in milliseconds - and everything else stays exactly where it was, also on the next load. The editor now scatters like loading does, so neighbouring areas no longer nudge each other with every stroke.
+- Gently raise and lower rock masses. New brush modes "Raise" and "Lower" move the rock surface by a set height per stroke (0.1-10 m) with a soft falloff up to 80 m - for gently curved surfaces instead of hard build-up strokes. The Sculpt tool (B) now works on rock masses too (smooth up to 20 m; flatten stays terrain-only).
+- Smoothing rock masses stays fast. Smoothing used to get slower and slower the longer you sculpted, until every stroke rebuilt the whole rock mass. Now each stroke only rebuilds the area it actually touches.
+
+SCATTERING
+- Scatter on one side only. Rock-mass and terrain scatter areas have a "Direction": all sides, "Toward the camera" (the side you are looking at), the opposite side, and an opening angle. The green preview shows what is left.
+- Pick objects below. A layer scattered on top now picks whole objects of the layer below with the brush - picked rocks glow green and get overgrown, also on top of big rocks you only painted from the side. "N of M selected", "Clear selection".
+- Grow on the front. "Scatter on top" can shoot horizontally from the side you are looking at, so plants grow on the front of the objects below, not only on their tops ("Rays come from: above | toward the camera | opposite side").
+- No size limit for scattered objects. The size slider goes from 0.1x to 100x (typed up to 1000x), with new presets "huge 5-15" and "gigantic 15-50".
+
+ROCK MASSES
+- Rock masses belong to a stage like terrain and objects: pick the segment and the transition in "Placement & box". The editor focus and the biome outline count them, and scatter areas on the rock mass follow along.
+- The move handle sits on the rock itself instead of the centre of its (often much larger) work box, and "Focus" frames the rock.
+
+FIXES
+- "Scatter on top" over rock walls: no more floating rings while painting, and painted rocks now actually get overgrown.
+- Rock-mass brush strokes no longer catch scattered rocks in front of the wall (the work box grew for nothing).
+- The sculpt brush no longer jumps to terrain behind the piece you are painting.
+- Deleting or hiding a published biome removed it locally but left it online.
